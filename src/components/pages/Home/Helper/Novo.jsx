@@ -17,22 +17,28 @@ const Novo = ({novoTodo}) => {
     }
     return(
         <div className='novo'>
-            <h2>Criar Tarefa:</h2>
+            <h2>Criar To Do:</h2>
             <form onSubmit={submitar}>
-                <input 
-                    type='texto' 
-                    placeholder='Digite o titulo:' 
-                    value= {value}
-                    onChange={(e) => setValue(e.target.value)}
-                />
+                <div className='caixaTexto'>
+                    <input 
+                        type='texto' 
+                        placeholder='Digite o título:' 
+                        value= {value}
+                        onChange={(e) => setValue(e.target.value)}
+                    />
+                </div>
                 
-                <input
-                    type='descricao'
-                    placeholder='Escreva a descrição do seu to do:'
-                    value = {descricao}
-                    onChange={(e) => setDescricao(e.target.value)}
-                />
-                <button type='submit'>Criar Tarefa</button>
+                <div className='caixaDescricao'>
+                    <input
+                        type='descricao'
+                        placeholder='Escreva a descrição do seu to do:'
+                        value = {descricao}
+                        onChange={(e) => setDescricao(e.target.value)}
+                    />
+                </div>
+                <div className='criar'>
+                    <button type='criar'>Adicionar To Do</button>
+                </div>
             </form>
         </div>
     )

@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
-//import {isEmailValid} from './../../../components/helpers/EmailHelper'
-///import ValidationError from './ValidationError';
 import './RegisterPage.css'
 import { useNavigate } from 'react-router-dom';
 import { CiUser ,CiLock } from "react-icons/ci";
-
-/*function RegisterPage(){
-    return(
-        <h1>Register Page</h1>
-    )
-
-
-}
-export default RegisterPage*/
-
-
 
 
 
@@ -35,74 +22,39 @@ function RegisterPage() {
     navigate('/');          //navigate('/');
   }
 
-  //{ form.email.hasChanged && !isEmailValid(form.email.value) && <div data-testeid="email-invalid">Email é inválido</div>}
 
-  /* <button 
-      type="button" 
-      className='clear'
-      data-testid="recover-password-button"
-      disabled={!isEmailValid(form.email.value)}>
-        Recuperar Senha 
-      </button>
-      
-      
-    
-     <button 
-      type="button" 
-      className='solid'
-      data-testid="cadastro-button"
-      disabled={!isEmailValid(form.email.value) || !form.password.value}>
-        Cadastrar
-      </button>  
-      
-      
-      
-       
-                      <div className='caixadeentrada'>
-                      <input 
-                      type="text" 
-                      placeholder='USUÁRIO' required 
-                      value={form.usuario.value}
-                      onChange={event => setForm({...form, usuario: {hasChanged: true, value: event.target.value}})} 
-                      data_testid='usuario'/>
-                      <CiUser className='icone' />
-                      { form.usuario.hasChanged && !form.usuario.value && <div data-testeid="usuario-required">Usuário obrigatório</div>}
-                      </div>
-      
-      
-      */ 
-
-  
   return (
     <div className='background'>
+
       <div className='pacotelogin'>
           <div className='interfacelogin'>
+
               <form action=''>
                 <h1>CADASTRE-SE</h1>
 
                 <div className='caixadeentrada'>
-                      <input 
-                      type="text" 
-                      placeholder='USUÁRIO' required 
-                      value={form.usuario.value}
-                      onChange={event => setForm({...form, usuario: {hasChanged: true, value: event.target.value}})} 
-                      data_testid='usuario'/>
-                      <CiUser className='icone' />
-                      { form.usuario.hasChanged && !form.usuario.value && <div className='obrigatorio' data-testeid="usuario-required">Usuário obrigatório</div>}
+                    <input 
+                    type="text" 
+                    placeholder='USUÁRIO' required 
+                    value={form.usuario.value}
+                    onChange={event => setForm({...form, usuario: {hasChanged: true, value: event.target.value}})} 
+                    data_testid='usuario'/>
+                    <CiUser className='icone' />
+                    { form.usuario.hasChanged && !form.usuario.value && <div className='obrigatorio' data-testeid="usuario-required">Usuário obrigatório</div>}
                 </div>
 
                 <div className='caixadeentrada'>
-                          <input 
-                          type="password" 
-                          placeholder='SENHA' required
-                          value={form.password.value}
-                          onChange={event => setForm({...form, password: {hasChanged: true, value: event.target.value}})} 
-                          data_testid='password'/>
-                          <CiLock className='icone' />
-                          <div className='informaçao'>
-                            { form.password.hasChanged && !form.password.value && <div className='obrigatorio' data-testeid="password-required">Senha obrigatória</div>}
-                          </div>
-                 </div>
+                    <input 
+                    type="password" 
+                    placeholder='SENHA' required
+                    value={form.password.value}
+                    onChange={event => setForm({...form, password: {hasChanged: true, value: event.target.value}})} 
+                    data_testid='password'/>
+                    <CiLock className='icone' />
+                    <div className='informaçao'>
+                      { form.password.hasChanged && !form.password.value && <div className='obrigatorio' data-testeid="password-required">Senha obrigatória</div>}
+                    </div>
+                </div>
 
                  <button 
                     type="button" 
@@ -114,8 +66,8 @@ function RegisterPage() {
 
                  
               </form>
-            </div>
-        </div>
+          </div>
+    </div>
 
         <div className='pacotebemvindo'>
           <div className='interfacebemvindo'>

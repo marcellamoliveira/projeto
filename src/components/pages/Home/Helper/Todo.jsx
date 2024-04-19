@@ -17,16 +17,18 @@ const Todo = ({ todo, apagarTodo, editarTodo, todoFeito }) => {
 
     return (
     <div className='todo' style={{ textDecoration: todo.feito ? "line-through" : "" }}>
-        <div className='icone_edicao'>
-            <button className='check' onClick={() => todoFeito(todo.id)}><CiSquareCheck className='certinho'/></button>
-         </div>
+    
+        <button className='check' onClick={() => todoFeito(todo.id)}><CiSquareCheck className='certinho'/></button>
         {editando ? (
             //caso mudou algo
             <div className='editor'>
-                <input className='nomeTodo' value={novoTexto} onChange={(e) => setNovoTexto(e.target.value)} />
-               
-                <input className='descricaoTodo' descricao={novaDescricao} onChange={(e) => setNovaDescricao(e.target.descricao)} />
-                <button onClick={salvarEdicao}>Salvar</button>
+                <div className='caixaedicao'>
+                 <input className='novonome' value={novoTexto} onChange={(e) => setNovoTexto(e.target.value)} />
+                </div>
+                <div className='caixaedicao'>
+                    <input className='novodescricao' value={novaDescricao} onChange={(e) => setNovaDescricao(e.target.value)} />
+                </div>
+                <button className='salvar' onClick={salvarEdicao}>Salvar</button>
             </div>
             ) : (
             //caso não mudar

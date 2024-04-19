@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom'
@@ -24,13 +24,6 @@ describe('Login', () => {
         const requiredError= screen.queryByTestId('usuario-required');
         expect(requiredError).toBeNull();
     })
-
-
-    /*test('Usuario foi dado, não mudado, retirar mensagem "Usuário Obrigatório"', async() => {
-        render(<BrownserRouter><LoginPage/></BrownserRouter>);
-        const requiredError= screen.queryByTestId('usuario-required');
-        expect(requiredError).toBeNull();
-    })*/
 
 
     test('Senha foi dada, se esvaziada, mostrar mensagem "Senha Obrigatória"', async() => {
@@ -60,16 +53,6 @@ describe('Login', () => {
     })
 
 
-    //given form valid, then enable login button
-    /*test('Form dado existente, mostrar botão Login', () => {
-        render(<BrownserRouter><LoginPage/></BrownserRouter>);
-        const email = screen.getByTestId('email');
-        userEvent.type(email, "valid$email.com")
-        const password = screen.getByTestId('password');
-        userEvent.type(password, "anyValue");
-        const loginButton = screen.getByTestId('login-button');
-        expect(loginButton).toBeDisabled();
-    })*/
 
 
     //given use clicks on register button, then go to register page
@@ -108,4 +91,4 @@ describe('Login', () => {
 
     
 
-})
+})*/

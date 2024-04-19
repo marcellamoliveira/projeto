@@ -24,21 +24,20 @@ function HomePage(){
         },*/
         {
             id: 1,
-            texto: "Criar funcionalidade X no sistema",
-            descricao: "ir a",
+            texto: "Ir ao cinema",
+            descricao: "Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema",
             feito: false,
         },
         {
             id: 2,
             texto: "Criar funcionalidade X no sistema",
-            descricao: "ir a",
+            descricao: "Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema",
             feito: false,
         },
         {
             id: 3,
             texto: "Criar funcionalidade X no sistema",
-        
-            descricao: "ir a",
+            descricao: "Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema",
             feito: false,
         },
         {
@@ -87,7 +86,7 @@ function HomePage(){
     }
 
     //editar um to do
-    const editarTodo = (id, novoTexto, novaCategoria, novaDescricao) => {
+    const editarTodo = (id, novoTexto, novaDescricao) => {
         const novoTodos = todos.map(todo =>
             todo.id === id ? { ...todo, texto: novoTexto, descricao: novaDescricao } : todo
         );
@@ -124,7 +123,7 @@ function HomePage(){
 
                 <div className='direita'>
                     <div className='direitacima'>   
-                        <h1>Lista de Tarefas</h1>
+                        <h1>TO DO LIST</h1>
                     </div>
 
                     <div className='direitameio'>

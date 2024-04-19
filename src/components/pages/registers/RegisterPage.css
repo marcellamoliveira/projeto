@@ -1,5 +1,5 @@
+/* FUNDO */
 .background{
-    
   width: 1294px;
   height: 728px;
   background: linear-gradient(180deg, rgba(48, 9, 25, 0.1) 0%, rgba(150, 27, 78, 0.1) 100%);
@@ -12,6 +12,8 @@
   align-items: center;
   flex-direction: column;
 }
+
+
 
 
 /*LADO LOGIN*/
@@ -32,17 +34,18 @@
 
 /*interface login*/
 .pacotelogin .interfacelogin {
-  color: #29294F;
+  color: #140438;
   padding: 0% 0 0 20%;
 }
-
 
 
 /*frase LOGIN*/
 .pacotelogin .interfacelogin h1 {
   font-size: 64px;
   padding: 10% 0% 0% 0%;
+  font-weight: 400;
 }
+
 
 /*caixa de USUARIO/SENHA */
 .pacotelogin .caixadeentrada {
@@ -53,13 +56,6 @@
 }
 
 
-/*.pacotelogin .caixadeentrada {
-  position: relative;
-  width: 450px;
-  height: 65px;
-  margin: 30px 0;
-}*/
-
 /* input USUARIO/SENHA*/
 .caixadeentrada input {
   width: 100%;
@@ -69,13 +65,15 @@
   border: 3px solid rgba(255, 255, 255, .2);
   border-radius: 60px;
   font-size: 24px;
-  color: #29294F;
+  color: #140438;
   padding: 20px 0px 20px 60px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 /* interior de cada caixa de entrada*/
 .caixadeentrada input::placeholder {
-  color: #29294F;
+  color: #140438;
   font-size: 22px; 
   letter-spacing: 0.3em;
   display: flex;
@@ -84,7 +82,7 @@
   justify-content: space-between;
 }
 
-/*icone de cada de entrada*/
+/*icone de cada caixa de entrada*/
 .caixadeentrada .icone {
   position: absolute;
   left:  20px;
@@ -104,22 +102,17 @@
   cursor: pointer;
   font-size: 28px;
   font-weight: 400;
-  background: #29294F;
+  background: #140438;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   font-family: "Jura", sans-serif;
   letter-spacing: 0.2em;
-  
+  margin-top: 10px;
+  opacity: 100%;
 }
 
-/*.interfacelogin button {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0px 0 0 0;
-}*/
+
 
 
 
@@ -139,28 +132,22 @@
 
 /*interface bem vindo*/
 .pacotebemvindo .interfacebemvindo {
-  color: #29294F;
   text-align: center;
   height: 728px;
   width: 427px;
   padding: 100px 0px 0px 0px;
   gap: 40px;
   position: absolute;
-  color: #29294F;
+  color: #140438;
   background: linear-gradient(198.7deg, #FFFFFF 0.26%, rgba(179, 179, 179, 0.1) 99.66%, #9F9F9F 99.74%);
   border-radius: 30px 0px 0px 30px;
 }
 
 
-/*.interfacebemvindo{
-  color: #29294F;
-  background: linear-gradient(198.7deg, #FFFFFF 0.26%, rgba(179, 179, 179, 0.1) 99.66%, #9F9F9F 99.74%);
-  border-radius: 30px 0px 0px 30px;
-}*/
-
 /*frase BEM VINDO*/
 .pacotebemvindo .interfacebemvindo h1{
   font-size: 50px;
+  font-weight: 500;
 }
 
 /*textinho de bemvindo*/
@@ -177,33 +164,29 @@
   letter-spacing: 0.2em;
 }
 
+/*secção do novo login*/
 .pacotebemvindo .registro {
-
   font-size: 50px;
   padding: 200px 0 0px 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  color: #29294F;
+  color: #140438;
   font-weight: 400;
 }
 
-/*
-.registro {
-  color: #29294F;
-  font-weight: 700;
-}*/
 
 /*frase NOVO LOGIN*/
 .registro p{
   font-size: 50px;
 }
 
+
 /*botão CRIAR CONTA*/
 .registro .criarconta {
   text-decoration: none;
-  color: #1a1a50;
+  color: #140438;
   width: 371px;
   height: 65px;
   background-color: whitesmoke;
@@ -217,15 +200,13 @@
   justify-content: space-between; 
   letter-spacing: 0.2em;
   font-family: "Jura", sans-serif;
+  cursor: pointer;
 }
 
+
+/* mensagem de usuario e senha obrigatorias*/
 .obrigatorio {
   font-size: 20px;
   font-weight: 700;
-
-
-}
-
-.pacotelogin .interfacelogin .obrigatorio {
   padding: 0px 0px 30px 60px ;
 }
