@@ -1,0 +1,231 @@
+.background{
+    
+  width: 1294px;
+  height: 728px;
+  background: linear-gradient(180deg, rgba(48, 9, 25, 0.1) 0%, rgba(150, 27, 78, 0.1) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: -80px 80px 100px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/*LADO LOGIN*/
+
+/*background login*/
+.pacotelogin {
+  width: 1294px;
+  height: 728px;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 0px 0px 21%;
+  margin-bottom: 5%;
+}
+
+/*interface login*/
+.pacotelogin .interfacelogin {
+  color: #29294F;
+  padding: 0% 0 0 20%;
+}
+
+
+
+/*frase LOGIN*/
+.pacotelogin .interfacelogin h1 {
+  font-size: 64px;
+  padding: 10% 0% 0% 0%;
+}
+
+/*caixa de USUARIO/SENHA */
+.pacotelogin .caixadeentrada {
+  position: relative;
+  width: 450px;
+  height: 65px;
+  margin: 30px 0;
+}
+
+
+/*.pacotelogin .caixadeentrada {
+  position: relative;
+  width: 450px;
+  height: 65px;
+  margin: 30px 0;
+}*/
+
+/* input USUARIO/SENHA*/
+.caixadeentrada input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: 3px solid rgba(255, 255, 255, .2);
+  border-radius: 60px;
+  font-size: 24px;
+  color: #29294F;
+  padding: 20px 0px 20px 60px;
+}
+
+/* interior de cada caixa de entrada*/
+.caixadeentrada input::placeholder {
+  color: #29294F;
+  font-size: 22px; 
+  letter-spacing: 0.3em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*icone de cada de entrada*/
+.caixadeentrada .icone {
+  position: absolute;
+  left:  20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+
+/*botão Entrar*/
+.pacotelogin button {
+  width: 450px;
+  height: 65px;
+  color: white;
+  outline: none;
+  border-radius: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 400;
+  background: #29294F;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  font-family: "Jura", sans-serif;
+  letter-spacing: 0.2em;
+  
+}
+
+/*.interfacelogin button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 0 0 0;
+}*/
+
+
+
+
+
+/*LADO BEM VINDO*/
+
+/*background bem vindo*/
+.pacotebemvindo{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 868px 300px 0px;
+}
+
+/*interface bem vindo*/
+.pacotebemvindo .interfacebemvindo {
+  color: #29294F;
+  text-align: center;
+  height: 728px;
+  width: 427px;
+  padding: 100px 0px 0px 0px;
+  gap: 40px;
+  position: absolute;
+  color: #29294F;
+  background: linear-gradient(198.7deg, #FFFFFF 0.26%, rgba(179, 179, 179, 0.1) 99.66%, #9F9F9F 99.74%);
+  border-radius: 30px 0px 0px 30px;
+}
+
+
+/*.interfacebemvindo{
+  color: #29294F;
+  background: linear-gradient(198.7deg, #FFFFFF 0.26%, rgba(179, 179, 179, 0.1) 99.66%, #9F9F9F 99.74%);
+  border-radius: 30px 0px 0px 30px;
+}*/
+
+/*frase BEM VINDO*/
+.pacotebemvindo .interfacebemvindo h1{
+  font-size: 50px;
+}
+
+/*textinho de bemvindo*/
+.pacotebemvindo .infos {
+  font-size: 22px;
+  width: 400px;
+  height: 65px;
+  margin: 30px 0px 0px 10px;
+  font-weight: 700;
+  position: relative;
+  height: 96px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.pacotebemvindo .registro {
+
+  font-size: 50px;
+  padding: 200px 0 0px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  color: #29294F;
+  font-weight: 400;
+}
+
+/*
+.registro {
+  color: #29294F;
+  font-weight: 700;
+}*/
+
+/*frase NOVO LOGIN*/
+.registro p{
+  font-size: 50px;
+}
+
+/*botão CRIAR CONTA*/
+.registro .criarconta {
+  text-decoration: none;
+  color: #1a1a50;
+  width: 371px;
+  height: 65px;
+  background-color: whitesmoke;
+  outline: none;
+  border: 3px solid rgba(255, 255, 255, .2);
+  border-radius: 60px;
+  font-size: 24px;
+  padding: 10px 50px 10px 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  font-weight: 700;
+  justify-content: space-between; 
+  letter-spacing: 0.2em;
+  font-family: "Jura", sans-serif;
+}
+
+.obrigatorio {
+  font-size: 20px;
+  font-weight: 700;
+
+
+}
+
+.pacotelogin .interfacelogin .obrigatorio {
+  padding: 0px 0px 30px 60px ;
+}

@@ -1,0 +1,423 @@
+body{
+    padding: 30px;
+    color: #333;
+  
+    }
+
+.home {
+    width: 1813px;
+    height: 971px;
+    background: linear-gradient(180deg, rgba(48, 9, 25, 0.1) 0%, rgba(150, 27, 78, 0.1) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: -80px 80px 100px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 0 0 0 0;
+
+    /*adicionei agr*/
+    margin: 0 auto;
+}
+
+.interfacelista{
+    display: flex;
+    justify-content: space-around;
+
+    
+    
+}
+
+.esquerda {
+    
+    border-radius: 10px;
+    text-align: center;
+    height: 971px;
+    width: 500px;
+    position: absolute;
+    color: #29294F;
+    background: linear-gradient(198.7deg, #FFFFFF 0.26%, rgba(179, 179, 179, 0.1) 99.66%, #9F9F9F 99.74%);
+    border-radius: 30px 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 270px;
+    
+    
+}
+
+
+.busca {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    border-bottom: 1px solid #29294F;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-family: "Jura", sans-serif;
+    font-size: 30px;
+    
+}
+
+
+.barradepesquisa {
+    position: absolute;
+    width: 431px;
+    height: 55px;
+    background: rgba(215, 205, 232, 0.35);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(40px);
+    border-radius: 60px;
+    margin-top: 50%;
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+    font-family: "Jura", sans-serif;
+    padding: 0px 10px 0px 15px
+
+
+}
+
+.filtro{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 32px;
+
+}
+
+.filtro-opçoes {
+    display: flex;
+    gap: 3rem;
+    border-top: 1px solid #29294F;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+.filtro-opçoes div{
+    flex: 1 1 0;   /*preencher o espaço possível*/
+}
+
+.classes{
+    width: 180px;
+    height: 40px;
+    background: rgba(215, 205, 232, 0.35);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(40px);
+    border-radius: 60px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+    color: #29294F;
+    font-family: "Jura", sans-serif;
+    font-size: 25px;
+    padding: 0px 10px 0px 15px;
+    font-weight: 700;
+    color: black;
+}
+
+.alfabetico  {
+    width: 80px;
+    height: 40px;
+    background: rgba(215, 205, 232, 0.35);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(40px);
+    border-radius: 60px;
+    color: #29294F;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+    border: #DDD;
+    font-family: "Jura", sans-serif;
+    font-size: 22px;
+    padding: 0px 10px 0px 15px;
+    font-weight: 700;
+    color: black;
+}
+
+.logout button {
+    width: 120px;
+    height: 40px;
+    background: rgba(215, 205, 232, 0.35);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(40px);
+    border-radius: 60px;
+    color: #29294F;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+    margin-bottom: 30px;
+    border: #DDD;
+    font-size: 18px;
+    bottom: 10px;
+    font-weight: 400;
+    color: black;
+}
+
+.logout button .iconelogout {
+    color: black;
+    position: absolute;
+    padding: 0px 0px 3px 2px;
+    font-weight: 700;
+    font-size: 25px;
+
+}
+
+button.hover{
+    opacity: 1;
+}
+
+
+.direita {
+    overflow: auto;
+
+    ::-webkit-scrollbar {
+        width: 14px;
+    }
+
+    width: 1138px;
+    height: 876px;
+    border-radius: 30px;
+    color: #29294F;
+    background: linear-gradient(198.7deg, #FFFFFF 0.26%, rgba(179, 179, 179, 0.1) 99.66%, #9F9F9F 99.74%);
+    background-color: #555;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 80px;
+    bottom: 4%;
+                
+    font-family: "Jura", sans-serif;
+    font-size: 24px;
+    padding: 0px 10px 0px 15px;
+    font-weight: 700;
+    justify-content: space-between;
+
+    /*border-radius: 10px;
+    text-align: center;
+    height: 971px;
+    width: 500px;
+    position: fixed;
+    color: #29294F;
+    background: linear-gradient(198.7deg, #FFFFFF 0.26%, rgba(179, 179, 179, 0.1) 99.66%, #9F9F9F 99.74%);
+    border-radius: 30px 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;*/
+
+}
+
+.direitacima {
+    position: absolute;
+    top: 10px;
+    
+    width: 1100px;
+    
+   
+    border-bottom: 1px solid #29294F;
+}
+
+.direitameio {
+
+    overflow: auto;
+    position: relative;
+
+    ::-webkit-scrollbar {
+        width: 14px;
+    
+    }
+    border-top: 1px solid #29294F;
+    border-bottom: 1px solid #29294F;
+    
+    height: 564px;
+    width: 1100px;
+    top: 66px;
+
+}
+
+.direitabaixo {
+    width: 1100px;
+    position: absolute;
+    bottom: 10px;
+    border-top: 1px solid #29294F;
+    
+}
+
+.novo{
+    padding-bottom: 5rem;
+}
+
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+p{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+.todo-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    
+    margin-bottom: 10px;
+    font-family: "Jura", sans-serif;
+    font-size: 24px;
+    padding: 0px 0px 0px 0px;
+    font-weight: 700;
+    
+}
+
+
+.todo {
+    background-color:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-family: "Jura", sans-serif;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    border-radius: 30px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+/*
+.todo{
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;  
+} */
+
+.check{
+    border: #DDD;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.certinho{
+    padding: 0px 0px 0px 0px;
+    font-size: 40px;
+    
+}
+
+
+.apagar{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: #c0251a;
+    border: #DDD;
+}
+
+.lixeira button .apagar{
+    padding: 10px;
+    font-size: 5430px;
+}
+
+.novo{
+    padding-bottom: 1.5rem;
+}
+
+.editar{
+    border: none;
+    background-color: none;
+    height: 40px;
+    width: 40px;
+}
+
+.lapis button .editar{
+    padding: 10px;
+    position: absolute;
+    right: 40px;
+    font-size: 40px;
+}
+
+input{
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #DDD;
+    border-radius: 30px;
+    
+    width: 100%;
+    background-color: #DDD;
+    
+    /*box-sizing: border-box;*/
+    
+}
+
+.nomeTodo  input {
+    position: relative;
+    width: 450px;
+    
+    margin: 30px 0;
+    
+}
+
+.descricaoTodo{
+    position: relative;
+    width: 450px;
+    height: 65px;
+    margin: 30px 0;
+}
+
+
+/*
+.pacotelogin .caixadeentrada {
+    position: relative;
+    width: 450px;
+    height: 65px;
+    margin: 30px 0;
+}
+
+
+.caixadeentrada input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 3px solid rgba(255, 255, 255, .2);
+    border-radius: 60px;
+    font-size: 24px;
+    color: #29294F;
+    padding: 20px 0px 20px 60px;
+}
+
+.caixadeentrada input::placeholder {
+    color: #29294F;
+    font-size: 22px; 
+    letter-spacing: 0.3em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+*/
