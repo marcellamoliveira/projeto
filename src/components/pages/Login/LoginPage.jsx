@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './LoginPage.css'
 import { useNavigate } from 'react-router-dom';
 import { CiUser ,CiLock } from "react-icons/ci";
+import { HiOutlineUser, HiOutlineLockClosed } from "react-icons/hi2";
 
 
 function LoginPage() {
@@ -18,9 +19,15 @@ function LoginPage() {
     }
   })
 
+ 
+
+  const validar = (usuario) => {
+    return /^[^\s]+$/.test(usuario);
+  }
+
   //função de ir da página de login para a página de registro
   const navigate = useNavigate();
-  const criarConta = () => {
+  const irRegistrar = () => {
     navigate('/register');
   }
 
@@ -39,9 +46,11 @@ function LoginPage() {
                       placeholder='USUÁRIO' required 
                       value={conta.usuario.value}
                       onChange={event => setForm({...conta, usuario: {hasChanged: true, value: event.target.value}})} 
-                      data_testid='usuario'/>
-                      <CiUser className='icone' />
-                      { conta.usuario.hasChanged && !conta.usuario.value && <div className='obrigatorio' data-testeid="usuario-required">Usuário obrigatório</div>}
+                      //data_testid='usuario'
+                      />
+                      <HiOutlineUser className='icone' />
+                      { conta.usuario.hasChanged && !conta.usuario.value && <div className='obrigatorio' >Usuário obrigatório</div>}
+                      { conta.usuario.hasChanged && conta.usuario.value && !validar(conta.usuario.value) && <div className='obrigatorio'>Usuário inválido</div>}
                   </div>
                   
                   <div className='caixadeentrada'>
@@ -50,9 +59,11 @@ function LoginPage() {
                       placeholder='SENHA' required
                       value={conta.password.value}
                       onChange={event => setForm({...conta, password: {hasChanged: true, value: event.target.value}})} 
-                      data_testid='password'/>
-                      <CiLock className='icone' />
+                      //data_testid='password'
+                      />
+                      <HiOutlineLockClosed className='icone' />
                       { conta.password.hasChanged && !conta.password.value && <div className='obrigatorio' data-testeid="password-required">Senha obrigatória</div>}
+                      { conta.password.hasChanged && conta.password.value && !validar(conta.password.value) && <div className='obrigatorio'>Senha inválida-Sem Espaçamento</div>}
                   </div>
                       
                       
@@ -61,7 +72,7 @@ function LoginPage() {
                   <button 
                       type="submit" 
                       className='solid'
-                      data-testid="login-button"
+                      //data-testid="login-button"
                       disabled = {!conta.password.value}>
                         Entrar
                   </button>
@@ -84,8 +95,8 @@ function LoginPage() {
                     type="button" 
                     className='criarconta'
                     href='./'
-                    data-testid='register-button'
-                    onClick={criarConta}>
+                    //data-testid='register-button'
+                    onClick={irRegistrar}>
                       Criar conta
                   </button>
               </div>

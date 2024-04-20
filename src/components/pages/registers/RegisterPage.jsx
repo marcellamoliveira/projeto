@@ -6,7 +6,7 @@ import { CiUser ,CiLock } from "react-icons/ci";
 
 
 function RegisterPage() {
-  const [form, setForm] = useState({ 
+  const [conta, setForm] = useState({ 
     usuario: {
       hasChanged: false,
       value:""
@@ -17,9 +17,13 @@ function RegisterPage() {
     }
   })
 
+  const validar = (usuario) => {
+    return /^[^\s]+$/.test(usuario);
+  }
+
   const navigate = useNavigate();
-  const goToLoginPage = () => {  //goToLoginPage
-    navigate('/');          //navigate('/');
+  const irLogar = () => {  
+    navigate('/');          
   }
 
 
@@ -36,31 +40,36 @@ function RegisterPage() {
                     <input 
                     type="text" 
                     placeholder='USUÁRIO' required 
-                    value={form.usuario.value}
-                    onChange={event => setForm({...form, usuario: {hasChanged: true, value: event.target.value}})} 
-                    data_testid='usuario'/>
+                    value={conta.usuario.value}
+                    onChange={event => setForm({...conta, usuario: {hasChanged: true, value: event.target.value}})} 
+                    //data_testid='usuario'
+                    />
                     <CiUser className='icone' />
-                    { form.usuario.hasChanged && !form.usuario.value && <div className='obrigatorio' data-testeid="usuario-required">Usuário obrigatório</div>}
+                    { conta.usuario.hasChanged && !conta.usuario.value && <div className='obrigatorio'>Usuário obrigatório</div>}
+                    { conta.usuario.hasChanged && conta.usuario.value && !validar(conta.usuario.value) && <div className='obrigatorio'>Usuário inválido</div>}
                 </div>
 
                 <div className='caixadeentrada'>
                     <input 
                     type="password" 
                     placeholder='SENHA' required
-                    value={form.password.value}
-                    onChange={event => setForm({...form, password: {hasChanged: true, value: event.target.value}})} 
-                    data_testid='password'/>
+                    value={conta.password.value}
+                    onChange={event => setForm({...conta, password: {hasChanged: true, value: event.target.value}})} 
+                    //data_testid='password'
+                    />
                     <CiLock className='icone' />
                     <div className='informaçao'>
-                      { form.password.hasChanged && !form.password.value && <div className='obrigatorio' data-testeid="password-required">Senha obrigatória</div>}
+                      { conta.password.hasChanged && !conta.password.value && <div className='obrigatorio'>Senha obrigatória</div>}
+                      { conta.password.hasChanged && conta.password.value && !validar(conta.password.value) && <div className='obrigatorio'>Senha inválida-Sem Espaçamento</div>}
                     </div>
                 </div>
 
                  <button 
                     type="button" 
                     className='solid'
-                    data-testid="cadastro-button"
-                    disabled={ !form.password.value}>
+                    //data-testid="cadastro-button"
+                    disabled={ !conta.password.value}
+                    onClick={irLogar}>
                       Entrar
                   </button>
 
@@ -81,8 +90,8 @@ function RegisterPage() {
                       type="button" 
                       className='criarconta'
                       href='./'
-                      data-testid='register-button'
-                      onClick={goToLoginPage}>
+                      //data-testid='register-button'
+                      onClick={irLogar}>
                         Fazer Login
                       </button>
                   </div>
@@ -94,86 +103,3 @@ function RegisterPage() {
       
 
 export default RegisterPage;
-
-/*
-
-return (
-    <div className='background'>
-      <div className='pacotelogin'>
-          <div className='interfacelogin'>
-              <form action=''>
-                      <h1>LOGIN</h1>
-
-
-                 
-                      
-                      <div className='caixadeentrada'>
-                      <input 
-                      type="text" 
-                      placeholder='USUÁRIO' required 
-                      value={form.usuario.value}
-                      onChange={event => setForm({...form, usuario: {hasChanged: true, value: event.target.value}})} 
-                      data_testid='usuario'/>
-                      <CiUser className='icone' />
-                      { form.usuario.hasChanged && !form.usuario.value && <div data-testeid="usuario-required">Usuário obrigatório</div>}
-                      </div>
-                      
-
-                      
-                      
-
-                      <div className='caixadeentrada'>
-                          <input 
-                          type="password" 
-                          placeholder='SENHA' required
-                          value={form.password.value}
-                          onChange={event => setForm({...form, password: {hasChanged: true, value: event.target.value}})} 
-                          data_testid='password'/>
-                          <CiLock className='icone' />
-                          <div className='informaçao'>
-                            { form.password.hasChanged && !form.password.value && <div data-testeid="password-required">Senha obrigatória</div>}
-                          </div>
-                      </div>
-                      
-                      
-                      
-                      
-                        <button 
-                        type="submit" 
-                        className='solid'
-                        data-testid="login-button"
-                        disabled = {!form.password.value}>
-                            Entrar
-                        </button>
-                      
-
-
-                  
-              </form>
-          </div>
-        </div>
-
-        <div className='pacotebemvindo'>
-          <div className='interfacebemvindo'>
-            <h1>BEM VINDO</h1>
-              <div className='infos'>
-                  <p>Crie sua lista de tarefas para organizar seus afazeres e gerenciar melhor seu tempo.</p>
-              </div>
-                  <div className='registro'>
-                      <p>Novo Login</p>
-                      <button 
-                      type="button" 
-                      className='criarconta'
-                      href='./'
-                      data-testid='register-button'
-                      onClick={goToRegisterPage}>
-                        Criar conta
-                      </button>
-                  </div>
-          </div>
-      </div>
-    </div>
-  );
-}
-
-*/

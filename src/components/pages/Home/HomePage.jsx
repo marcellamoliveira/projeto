@@ -7,6 +7,7 @@ import Todo from './Helper/Todo'
 import Novo from './Helper/Novo'
 import { useNavigate } from 'react-router-dom';
 import { CiLogout } from "react-icons/ci";
+import { HiOutlineLogin } from "react-icons/hi";
 
 
 
@@ -36,7 +37,7 @@ function HomePage(){
         },
         {
             id: 3,
-            texto: "Criar funcionalidade X no sistema",
+            texto: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
             descricao: "Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema Ir ao cinema",
             feito: false,
         },
@@ -66,11 +67,7 @@ function HomePage(){
     };
 
 
-    /*const updateTodo = (todoid, novoTodo) => {
-        setTodos(prev.map(item =>(item.id === todo.id ? novoTodo : item)));
-    }; */
-
-    //apagar um todo
+    //apagar um to do
     const apagarTodo = (id) => {
         const conjunto = [...todos]
         const averiguados = conjunto.filter(todo => todo.id !== id ? todo : null);
@@ -84,6 +81,7 @@ function HomePage(){
         conjunto.map((todo) => todo.id === id ? todo.feito = !todo.feito : todo)
         setTodos(conjunto)
     }
+
 
     //editar um to do
     const editarTodo = (id, novoTexto, novaDescricao) => {
@@ -103,11 +101,7 @@ function HomePage(){
         navigate('/');
     }
 
-    /*const ref = useRef(null);
-    
-    const handleClick = () => {
-        ref.current?.scrollIntoView({behavior: 'smooth'});
-    };*/
+
 
     return (
         <div className='home'>
@@ -117,7 +111,7 @@ function HomePage(){
                     <Barra busca={busca} setBusca={setBusca}/>
                     <Filtro filtro={filtro} setFiltro={setFiltro} setOrdem={setOrdem}/>
                     <div className='logout'>
-                        <button onClick={logout}>Logout<CiLogout className='iconelogout'/></button>
+                        <button onClick={logout}>Logout<HiOutlineLogin className='iconelogout'/></button>
                     </div>
                 </div>
 
@@ -147,7 +141,7 @@ function HomePage(){
                                     todo={todo} 
                                     apagarTodo={apagarTodo} 
                                     todoFeito={todoFeito}
-                                    editarTodo={editarTodo} />
+                                    editarTodo={editarTodo}/>
                                 ))}
                             </div>
                         </div>

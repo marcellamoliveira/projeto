@@ -1,11 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 import { CiSquareCheck, CiEdit, CiTrash } from "react-icons/ci";
+import { HiOutlinePencilSquare, HiOutlinePencil, HiOutlineTrash, HiOutlineCheck } from "react-icons/hi2";
+import { IoIosAddCircle } from "react-icons/io";
+import { FaRegSquare, FaRegSquareCheck } from "react-icons/fa6";
+
 
 const Todo = ({ todo, apagarTodo, editarTodo, todoFeito }) => {
     const [editando, setEditando] = useState(false);
     const [novoTexto, setNovoTexto] = useState(todo.texto);
-    
     const [novaDescricao, setNovaDescricao] = useState(todo.descricao);
 
     //função de salvar o todo depois de editado
@@ -13,12 +16,31 @@ const Todo = ({ todo, apagarTodo, editarTodo, todoFeito }) => {
         editarTodo(todo.id, novoTexto, novaDescricao);
         setEditando(false);
     };
+
+    
+    const [mudou, setMudou] = React.useState(false);
+    
+    
+
+    
+
+    // Função para botar um certinho no botão de feito 
+    const mudando = () => {
+        todoFeito(todo.id); // Chama a função todoFeito para marcar/desmarcar a tarefa como feita
+        setMudou(!mudou); // Alterna o estado de checked
+    };
     
 
     return (
     <div className='todo' style={{ textDecoration: todo.feito ? "line-through" : "" }}>
     
-        <button className='check' onClick={() => todoFeito(todo.id)}><CiSquareCheck className='certinho'/></button>
+        <div>
+            <button className='check'onClick={mudando}>
+                {mudou ? <FaRegSquareCheck className='feito' /> : <FaRegSquare className='naoFeito' />}
+            </button>
+        </div>
+        
+       
         {editando ? (
             //caso mudou algo
             <div className='editor'>
@@ -34,15 +56,17 @@ const Todo = ({ todo, apagarTodo, editarTodo, todoFeito }) => {
             //caso não mudar
             <div className='content'>
                 <p>{todo.texto}</p>
-                
                 <p className='descricao'>{todo.descricao}</p> 
             </div>
             )
         }
-            <div>
-                {!editando && <button className='editar' onClick={() => setEditando(true)}><CiEdit className='lapis'/></button>}
+        {
+
+        }
+            <div className='icones'>
+                {!editando && <button className='editar' onClick={() => setEditando(true)}><HiOutlinePencil  className='lapis'/></button>}
                 
-                <button className='apagar' onClick={() => apagarTodo(todo.id)}><CiTrash className='lixeira'/></button>
+                <button className='apagar' onClick={() => apagarTodo(todo.id)}><HiOutlineTrash className='lixeira'/></button>
             </div>
         </div>
     );

@@ -15,6 +15,8 @@ const Novo = ({novoTodo}) => {
         novoTodo(value, descricao)
         
     }
+
+    
     return(
         <div className='novo'>
             <h2>Criar To Do:</h2>
